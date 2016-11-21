@@ -1,0 +1,109 @@
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Conference Management System</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a ui-sref="home.editUser"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="javascript: void(0);" ng-click="logout()"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li  ng-show="$root.isRole('admin')">
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a ui-sref="home.FetchNew"><i class="fa fa-user fa-fw"></i> New Requests</a>
+                        </li>
+                        <li>
+                            <a ui-sref="home.RemoveReq"><i class="fa fa-wrench fa-fw"></i> Manage Privileges</a>
+                        </li>
+                    </ul>
+                    <!-- /.nav-second-level -->
+                    </li>
+                    <li   ng-show="$root.isRole('normal')">
+
+
+                                <a ui-sref="home.requestForPrivilege"><i class="fa fa-sitemap fa-fw"></i> Request for Privilege</a>
+
+
+                    <li  ng-show="$root.isRole('normal')">
+                        <a ui-sref="home.listConferences"><i class="fa fa-newspaper-o fa-fw"></i> All Conferences</span></a>
+
+
+                    </li>
+
+                 <!--   <li  ng-show="$root.isRole('chair')">
+                        <a ui-sref="#"><i class="fa fa-sitemap fa-fw"></i> All Conferences</span></a>
+
+                    </li>-->
+                    <li   ng-show="$root.isRole('chair')">
+                        <a ui-sref="home.myConferences"><i class="fa fa-files-o fa-fw"></i> My Conferences</span></a>
+                    </li>
+                    <li ng-show="$root.isRole('normal')">
+                        <a ui-sref="home.normal"><i class="fa fa-files-o fa-fw"></i> My Conferences</span></a>
+                    </li>
+                    <li ng-show="$root.isRole('normal')">
+                        <a ui-sref="home.chat"><i class="fa fa-comment-o"></i> Chat</span></a>
+                    </li>
+                    <li ng-show="$root.isRole('chair')">
+                        <a ui-sref="home.create_conf"> <i class="fa fa-folder-open-o"></i> Create Conference</a>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li ng-show="$root.isRole('chair')">
+                        <a ui-sref="home.chart"><i class="fa fa-bar-chart"></i> Chart & Reports</a>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <!-- Page Content -->
+    <div id="page-wrapper">
+        <div ui-view></div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+

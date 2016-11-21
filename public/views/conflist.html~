@@ -1,0 +1,316 @@
+x1x`<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../stylesheets/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../stylesheets/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <!--link href="../stylesheets/dataTables.responsive.css" rel="stylesheet"-->
+
+    <!-- Custom CSS -->
+    <link href="../stylesheets/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!--link href="/home/dhanashree/Downloads/TK_Project/Try/font-awesome.min.css" rel="stylesheet" type="text/css"-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Conference Management System</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+            <!-- /.dropdown -->
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                    </li>
+                </ul>
+                <!-- /.dropdown-user -->
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li class="sidebar-search">
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                        </div>
+                        <!-- /input-group -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> Admin<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="tables.html"><i class="fa fa-user fa-fw"></i> New Requests</a>
+                            </li>
+                            <li>
+                                <a href="Manage_Pri.html"><i class="fa fa-wrench fa-fw"></i> Manage Privileges</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> General User<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"> Request for Privilege</a>
+                            </li>
+                        </ul>
+                    <li>
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap fa-fw"></i> All Conferences<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"> TK <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#"> Virtual Reality</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> Web Development</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                            <li>
+                                <a href="#"> SDN <span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#"> Control Plane and Data Plane</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"> SDN Introduction</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-third-level -->
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+
+                    <li>
+                        <a href="#"><i class="fa fa-pencil fa-fw"></i> Submissions<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="blank.html">Blank Page</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-list-alt fa-fw"></i> Reviews<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="blank.html">Blank Page</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users fa-fw"></i> Chair<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#" href="blank.html"> Create Conference</a>
+                            </li>
+                            <li>
+                                <a href="#" href="blank.html"> Add Members</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>All Conferences </h3>
+                    </div>
+                    <!-- /.panel-heading -->
+		    
+                    <div class="panel-body">
+                        <div class="row conflistnormal panel panel-default panel-body">
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Conference Title:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Department:</strong> <span>SDN</span>
+					</div>
+				</div>
+                            	<div class=row>
+					<div class="col-sm-6">
+						<strong>Conference Description:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Conference Start Date:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Submission Deadline:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Review Deadline:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Created By:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Chair Members:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-2 col-sm-offset-10">
+						<button class="btn btn-primar">JOIN</button>
+					</div>
+				</div>
+                        </div>
+<div class="row conflistnormal panel panel-default panel-body">
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Conference Title:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Department:</strong> <span>SDN</span>
+					</div>
+				</div>
+                            	<div class=row>
+					<div class="col-sm-6">
+						<strong>Conference Description:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Conference Start Date:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Submission Deadline:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Review Deadline:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-6">
+						<strong>Created By:</strong> <span>SDN</span>
+					</div>
+					<div class="col-sm-6">
+						<strong>Chair Members:</strong> <span>SDN</span>
+					</div>
+				</div>
+				<div class=row>
+					<div class="col-sm-2 col-sm-offset-10">
+						<button class="btn btn-primar">JOIN</button>
+					</div>
+				</div>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="../../serverroutes/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../../serverroutes/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../../serverroutes/metisMenu.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="../../serverroutes/jquery.dataTables.min.js"></script>
+<script src="../../serverroutes/dataTables.bootstrap.min.js"></script>
+<script src="../../serverroutes/dataTables.responsive.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../serverroutes/sb-admin-2.js"></script>
+
+<!-- Page-Level Demo Scripts - Tables - Use for reference -->
+<script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+
+<div class="row">
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>{{conference.conferenceTitle}}</h3>
+                <h5>Submission End Date : {{conference.submissionEndDate|date: 'dd-MM-yyyy'}}</h5>
+                <h5>Review End Date : {{conference.reviewEndDate|date: 'dd-MM-yyyy'}}</h5>
+                <h5>Submission Status : {{sub.submissionStatus}}</h5>
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+
+                <div>
+                    <h4>Document Submission</h4>
+                </div>
+                <form role="form" ng-submit="uploadDoc()">
+                    <div  class="form-group">
+                        <strong>Submission Title*:</strong> <input class="form-control" type="text" ng-model="sub.submissionTitle" ng-required="true" placeholder="Submission Title" autofocus>
+                    </div>
+                    <div  class="form-group">
+                        <strong> Abstract*:</strong> <textarea class="form-control" type="text" ng-model="sub.abstract" ng-required="true" placeholder="Abstract" autofocus></textarea>
+                    </div>
+                    <div  class="form-group">
+                        <strong>Keywords*:</strong> <textarea class="form-control" type="text" ng-model="sub.keywords" ng-required="true" placeholder="Keywords" autofocus></textarea>
+                    </div>
+                    <div  class="form-group">
+					<span><strong>Co-Authors:</strong>
+					<select class="form-control" id="sel1" ng-model="sub.coAuthors" multiple>
+                        <option ng-repeat="ca in coauthors" value="{{value.getId(ca)}}">{{ca.firstName}} {{ca.lastName}} - ({{ca.postalAddress}},{{ca.city}},{{ca.state}},{{ca.country}}) - <strong>{{ca.email}}</strong></option>
+                    </select>
+					</span>
+                    </div>
+
+                    <div class="form-group">
+                        <div><strong>Upload document*:</strong></div>
+                        <div class="col-lg-3 form-group" ng-show="previousdoc">
+                            <button type="button" class="btn btn-sm btn-info" ><a style="text-decoration:none;color:white" target="_blank" ng-href="/uploads/{{ value.getId(sub)}}.pdf">View Document</a></button>
+                        </div>
+                        <input class="form-control" ngf-select ng-model="sub.uploadFile" name="uploadFile" id="uploadFile" ngf-accept="'.pdf'" ngf-multiple="false" type="file" ng-required="true" autofocus>
+                    </div>
+                    <strong><div>{{message}}</div></strong>
+                    <strong><div>{{progress}}</div></strong>
+
+                    <div class="col-lg-2 col-lg-offset-10 col-sm-4 col-xs-6 form-group">
+                        <button class="btn btn-sm btn-success btn-block" ng-disabled="enddateover || notauthor || submitted" type="submit">Submit</button>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-lg-2 col-sm-4 col-xs-6">
+                        <button class="btn btn-sm btn-success btn-block" ng-disabled="enddateover || notauthor || submitted" ng-click="saveSubmission()">Save</button>
+                    </div>
+                    <div class="col-lg-2 col-sm-4 col-xs-6">
+                        <button class="btn btn-sm btn-success btn-block"  ng-disabled="enddateover || notauthor || !submitted" ng-click="withdrawSubmission()">Withdraw</button>
+                    </div>
+
+                </div>
+                <br>
+                <div>
+                    <h4><strong>Review Details</strong></h4>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p><strong>Review Status:</strong> {{review.reviewStatus}}</p>
+                        <p><strong>Reviewer Expertise:</strong> {{review.reviewerExpertise}}</p>
+                        <p><strong>Summary:</strong> {{review.summary}}</p>
+                        <p><strong>Strong Points:</strong> {{review.strongPoints}}</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><strong>Weak Points:</strong> {{review.weakPoints}}</p>
+                        <p><strong>Review Deadline:</strong> {{conference.reviewEndDate|date: 'dd-MM-yyyy'}}</p>
+                        <p><strong>Comments:</strong> {{review.comments}}</p>
+                        <p><strong>Overall Evaluation:</strong> {{review.overallEvaluation}}</p>
+                    </div>
+
+                    <!-- /.table-responsive -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+</div>
+<!-- /#page-wrapper -->
+
+

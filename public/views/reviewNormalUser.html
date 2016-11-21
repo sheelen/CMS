@@ -1,0 +1,107 @@
+<div class="row" >
+    <div class="col-lg-12">
+        <p ng-hide="reviewStatus" style="color:orangered"><br><br><br>No review has been assigned so far...</p>
+        <p ng-show="Status=='Submission Stage'" style="color:orangered"><br><br><br>Please come back when submission phase is over...</p>
+        <div class="panel panel-default" ng-show="Status=='Review Stage'|| Status=='Ended'" ng-hide="'Submission Stage'">
+            <div class="panel-heading">
+                <p style="font-size:26px;font-weight: 600">Review</p>
+            </div>
+
+            <div class="panel-body">
+                <div>
+                    <p><strong>Submission Title : </strong>{{submission.submissionTitle}}</p>
+                    <p><strong>Abstract : </strong>{{submission.abstract}}</p>
+                    <p><strong>Keywords : </strong>{{submission.keywords}}</p>
+                    <p><strong><span><button class="btn btn-xs btn-info "><a style="text-decoration:none;color:white" ng-href="/uploads/{{ value.getId(submission)}}.pdf" target="_blank"  >Download Submission</a></button></span></strong> </p>
+                </div>
+
+    <hr>
+
+                <div class="col-sm-10 container">
+                    <div class="form-group" >
+                        <label >Expertise on assigned topic :</label><br>
+                        <form>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Expertise.level" value="Not Familiar">
+                            Not Familiar
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Expertise.level" value="Novice">
+                            Novice
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Expertise.level" value="Average">
+                            Average
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Expertise.level" value="Good">
+                            Good
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Expertise.level" value="Expert">
+                            Expert
+                        </label>
+                        </form>
+                    </div>
+                    <div >
+
+                    </div>
+                    <div class="form-group" >
+                        <label >Summary :</label>
+                        <a href="#" editable-textarea="summary" blur="submit" buttons="no" e-rows="4" e-cols="30">
+                            <pre>{{ summary }}</pre>
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <label >Detailed Comments :</label>
+                        <a href="#" editable-textarea="comments" blur="submit" buttons="no" e-rows="4" e-cols="30">
+                            <pre>{{ comments  }}</pre>
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <label >Major strong points :</label>
+                        <a href="#" editable-textarea="strongPoints" blur="submit" buttons="no" e-rows="4" e-cols="30">
+                            <pre>{{ strongPoints  }}</pre>
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <label >Major weak points :</label>
+                        <a href="#" editable-textarea="weakPoints" blur="submit" buttons="no" e-rows="4" e-cols="30">
+                            <pre>{{ weakPoints   }}</pre>
+                        </a>
+                    </div>
+                    <div class="form-group" >
+                        <form>
+                        <label >Overall Evaluation :</label><br>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Evaluation.level" value="Strong Reject">
+                            Strong Reject
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Evaluation.level" value="Weak Reject">
+                            Weak Reject
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Evaluation.level" value="Neutral">
+                            Neutral
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Evaluation.level" value="Weak Accept">
+                            Weak Accept
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="Evaluation.level" value="Strong Accept">
+                            Strong Accept
+                        </label>
+                        </form>
+                    </div>
+
+                    <div><button ng-hide="Status=='Ended'" type="button"class="btn-success" class="btn btn-default" ng-click="saveReview()">Submit</button></div>
+
+                </div>
+
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
