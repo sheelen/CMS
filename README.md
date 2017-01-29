@@ -1,9 +1,9 @@
 # CMS
 
-It a conference management system that has three roles:
+A conference management system where members can particiate and can have different roles.
 
-##############################################################
-Admin: One who manages privileges in the system.
-Chair: Creates conference events.
-user: joins ongoing conference events
-##############################################################
+##################################################################
+Admin: One who manages/grants privileges in the system.
+Chair: Creates conference events (the user must first seek privilege from admin).
+user: joins ongoing conference events.
+##################################################################
