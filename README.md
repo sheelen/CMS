@@ -3,7 +3,7 @@
 A conference management system where members can particiate and can have different roles.
 
 ##################################################################
-Admin: One who manages/grants privileges in the system.
+Admin: One who manages/grants privileges in the system. /n
 Chair: Creates conference events (the user must first seek privilege from admin).
 user: joins ongoing conference events.
 ##################################################################
